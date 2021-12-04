@@ -7,8 +7,8 @@ class PostsController < ApplicationController
    # def new
    # end
 
-  def create
-    Post.create(content: params[:content])
-    redirect_to action: :index 
+  def create 
+    post = Post.create(content: params[:content])
+    render josn:{ post: post }
   end
 end
