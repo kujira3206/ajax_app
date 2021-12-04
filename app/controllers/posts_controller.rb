@@ -9,6 +9,6 @@ class PostsController < ApplicationController
 
   def create 
     post = Post.create(content: params[:content])
-    render josn:{ post: post }
+    render json:{ post: post }
   end
 end
